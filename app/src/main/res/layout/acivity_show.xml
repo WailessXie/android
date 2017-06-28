@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_cancel1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#039DCF"-->
+                <!--android:text="取消" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="" />
+                </LinearLayout>
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_ok1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#039DCF"-->
+                <!--android:text="保存" />-->
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_content"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:inputType="text"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_title"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:inputType="text"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/reciever"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="收件人"
+                        app:met_baseColor="#0056d3"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="收件人" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="输入主题"
+                        android:singleLine="true"
+                        app:met_baseColor="#0056d3"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="主题"
+                        app:met_maxCharacters="15" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="写邮件"
+                        android:inputType="textMultiLine"
+                        app:met_baseColor="#0056d3"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="邮件内容"
+                        app:met_hideUnderline="true" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_done"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="bottom|left"
+        app:rippleColor="@color/main_blue_dark" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_undo_black_24dp"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="bottom|right"
+        app:rippleColor="@color/main_blue_dark" />
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+

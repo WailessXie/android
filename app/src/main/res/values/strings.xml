@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ymail</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="edit_text">编辑备忘录</string>
+    <string name="important">重要邮件</string>
+    <string name="sended">已发送</string>
+    <string name="allMail">所有邮件</string>
+    <string name="trash">已删除邮件</string>
+    <string name="drafts">草稿</string>
+    <string name="inBox">收件箱</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="about_content">制作者：谢彪业.\n基于Google最新设计material design，参照gmail.\n有任何问题可以联系邮箱：xiebiaoye123@gmail.com</string>
+    <string name="Card_content">使用Ymail收件箱，让你的一切井井有条。</string>
+    <string name="details_content">汇聚Ymail之精华，随时随地供你使用\n安装官方的Ymail应用，你才能使用Ymail的最佳功能，或者访问Ymail.xieboy.cn即可开始使用，祝你使用愉快。\nYmail敬上</string>
+</resources>
